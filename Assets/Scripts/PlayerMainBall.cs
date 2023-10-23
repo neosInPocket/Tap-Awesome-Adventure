@@ -21,7 +21,17 @@ public class PlayerMainBall : BallAbstract
 	{
 		EnhancedTouchSupport.Enable();
 		TouchSimulation.Enable();
+		EnableControls();
+	}
+	
+	public void EnableControls()
+	{
 		Touch.onFingerDown += OnFingerDownHandler;
+	}
+	
+	public void DisableControls()
+	{
+		Touch.onFingerDown -= OnFingerDownHandler;
 	}
 
 	protected override void UpdateLogic()
@@ -56,8 +66,18 @@ public class PlayerMainBall : BallAbstract
 		}
 	}
 	
+	public void GetDamage()
+	{
+		
+	}
+	
 	public void RaiseDamageTakenEvent()
 	{
 		PlayerDamageTaken?.Invoke();
+	}
+	
+	private void OnDestroy()
+	{
+		DisableControls();
 	}
 }

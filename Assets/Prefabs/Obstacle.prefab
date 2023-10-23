@@ -173,6 +173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinPrefab: {fileID: 1591225196207669528, guid: 5234f41f80d2e0041a77665e6bd14859, type: 3}
   coinSpawnChance: 0.7
-  speed: 1
+  speed: 1.5
   spriteRenderer: {fileID: 8803800562282809934}
   rb: {fileID: -7027198955069538323}
