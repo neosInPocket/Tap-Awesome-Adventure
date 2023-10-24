@@ -325,7 +325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1725, y: 0}
+  m_AnchoredPosition: {x: 1574, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &109484044
@@ -340,6 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd64e3d0281fb74e8fa3037c7436a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 1739505493}
 --- !u!1 &128876689
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +918,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1847259822}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: SetTrigger
         m_Mode: 5
@@ -926,7 +927,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Back
+          m_StringArgument: ShopToMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &323584835
@@ -1241,9 +1242,9 @@ RectTransform:
   - {fileID: 688490413}
   m_Father: {fileID: 1581215416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 496.79996, y: -563.3241}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 496.80002, y: 0}
   m_SizeDelta: {x: 913.5999, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &469568593
@@ -1290,8 +1291,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
+      - m_Target: {fileID: 924910912}
+        m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
         m_MethodName: Refresh
         m_Mode: 1
         m_Arguments:
@@ -1302,7 +1303,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1847259822}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: SetTrigger
         m_Mode: 5
@@ -1739,8 +1740,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 36b287fac6c2d7a4896a3721ff364f7b, type: 2}
+  m_sharedMaterial: {fileID: 2159306293243662161, guid: 36b287fac6c2d7a4896a3721ff364f7b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1764,7 +1765,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 200.6
+  m_fontSize: 169.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1800,7 +1801,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 108.317, y: 0, z: 108.316956, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2080,7 +2081,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 50
+  m_text: 100
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 36b287fac6c2d7a4896a3721ff364f7b, type: 2}
   m_sharedMaterial: {fileID: 2159306293243662161, guid: 36b287fac6c2d7a4896a3721ff364f7b, type: 2}
@@ -2107,7 +2108,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80.2
+  m_fontSize: 74.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2414,6 +2415,7 @@ GameObject:
   - component: {fileID: 813559140}
   - component: {fileID: 813559142}
   - component: {fileID: 813559141}
+  - component: {fileID: 813559143}
   m_Layer: 5
   m_Name: SettingsCaption
   m_TagString: Untagged
@@ -2437,7 +2439,7 @@ RectTransform:
   m_Father: {fileID: 109484043}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0.6801399}
-  m_AnchorMax: {x: 0.9, y: 0.89500004}
+  m_AnchorMax: {x: 0.9, y: 0.9341161}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2461,8 +2463,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 337ba01d6f31d3e41b238e36119bf30c, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 119f366e179092744b110c819b5a34c7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2479,6 +2481,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813559139}
   m_CullTransparentMesh: 1
+--- !u!114 &813559143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813559139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1.4949664
 --- !u!1 &924910910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,7 +2531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1620, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &924910912
@@ -2530,6 +2546,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65ba33975e76c241bc39dc21c2eecb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedUpgradesStars:
+  - {fileID: 278011168}
+  - {fileID: 1206503201}
+  - {fileID: 379099960}
+  lifesUpgradesStars:
+  - {fileID: 702440315}
+  - {fileID: 796963600}
+  - {fileID: 2048751821}
+  SpeedButton: {fileID: 1675841438}
+  lifesButton: {fileID: 1354840878}
+  coinsAmount: {fileID: 1080692320}
 --- !u!1 &936798427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,9 +2811,9 @@ RectTransform:
   - {fileID: 1317854921}
   m_Father: {fileID: 1581215416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 496.79996, y: -187.77469}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 496.80002, y: 0}
   m_SizeDelta: {x: 913.5999, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &997108371
@@ -2833,7 +2860,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1847259822}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: SetTrigger
         m_Mode: 5
@@ -2842,7 +2869,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: LoadGame
+          m_StringArgument: Play
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &997108372
@@ -3317,8 +3344,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 36b287fac6c2d7a4896a3721ff364f7b, type: 2}
+  m_sharedMaterial: {fileID: 2159306293243662161, guid: 36b287fac6c2d7a4896a3721ff364f7b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3342,7 +3369,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 155.05
+  m_fontSize: 136
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3358,7 +3385,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -3378,7 +3405,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 57.15704, y: 0, z: 57.157043, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3694,7 +3721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3518, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1298728579
@@ -3959,9 +3986,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
-        m_MethodName: BuyGravityUpgrade
+      - m_Target: {fileID: 924910912}
+        m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
+        m_MethodName: LifesAmountUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4355,8 +4382,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1731198567}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.122175984, y: 0.3166598}
-  m_AnchorMax: {x: 0.8886473, y: 0.5}
+  m_AnchorMin: {x: 0.122175984, y: 0.41444364}
+  m_AnchorMax: {x: 0.8886473, y: 0.60488737}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4382,8 +4409,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Music volume:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 36b287fac6c2d7a4896a3721ff364f7b, type: 2}
+  m_sharedMaterial: {fileID: 2159306293243662161, guid: 36b287fac6c2d7a4896a3721ff364f7b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4407,7 +4434,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 111.63
+  m_fontSize: 101.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4507,15 +4534,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: ef217cc9397d8444e9eac8f3188cc2af, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4581,6 +4608,7 @@ GameObject:
   - component: {fileID: 1534690335}
   - component: {fileID: 1534690334}
   - component: {fileID: 1534690333}
+  - component: {fileID: 1534690336}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -4603,8 +4631,8 @@ RectTransform:
   - {fileID: 1237319257}
   m_Father: {fileID: 109484043}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.15, y: 0.05230358}
-  m_AnchorMax: {x: 0.85, y: 0.1595357}
+  m_AnchorMin: {x: 0.15, y: 0.095000006}
+  m_AnchorMax: {x: 0.85, y: 0.18739586}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4652,7 +4680,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1847259822}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: SetTrigger
         m_Mode: 5
@@ -4661,12 +4689,12 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Back
+          m_StringArgument: SettingsToMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SoundController, Assembly-CSharp
-        m_MethodName: SaveMusicVolume
+      - m_Target: {fileID: 6321669987480508287}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: SaveVolumeValue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4696,8 +4724,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1bc990bbbd045954386781e4a54d0369, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 1ae24df50db43e44ca3419cb0938bb5c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4714,6 +4742,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534690331}
   m_CullTransparentMesh: 1
+--- !u!114 &1534690336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534690331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 2.7054162
 --- !u!1 &1537633975
 GameObject:
   m_ObjectHideFlags: 0
@@ -5047,8 +5089,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 53d19a1609b4fc741a897871bce5fae1, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 005bf78d1f6ce6c41bdf02a8e74f8778, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5056,7 +5098,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3.93
 --- !u!222 &1634331388
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5149,9 +5191,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
-        m_MethodName: BuyGravityUpgrade
+      - m_Target: {fileID: 924910912}
+        m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
+        m_MethodName: SpeedUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5211,7 +5253,7 @@ GameObject:
   - component: {fileID: 1731198569}
   - component: {fileID: 1731198568}
   m_Layer: 5
-  m_Name: MusicVolumeCaption
+  m_Name: VolumePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5233,10 +5275,10 @@ RectTransform:
   - {fileID: 1739505492}
   m_Father: {fileID: 109484043}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1, y: 0.24072024}
-  m_AnchorMax: {x: 0.9, y: 0.614}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.1, y: 0.246}
+  m_AnchorMax: {x: 0.91700006, y: 0.66460425}
+  m_AnchoredPosition: {x: -10.5, y: 0}
+  m_SizeDelta: {x: -21, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1731198568
 MonoBehaviour:
@@ -5258,7 +5300,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9cb979f4e5388aa42969de576528f475, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a9a86eccc1f257478acbc60d154bb8e, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5267,7 +5309,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 1.16
 --- !u!222 &1731198569
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5310,10 +5352,10 @@ RectTransform:
   - {fileID: 155316240}
   m_Father: {fileID: 1731198567}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.122175984, y: 0.158}
-  m_AnchorMax: {x: 0.8886473, y: 0.30669346}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.122175984, y: 0.21755345}
+  m_AnchorMax: {x: 0.8886473, y: 0.36277598}
+  m_AnchoredPosition: {x: 0, y: 10}
+  m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739505493
 MonoBehaviour:
@@ -5366,9 +5408,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SoundController, Assembly-CSharp
-        m_MethodName: ChangeMusicVolume
+      - m_Target: {fileID: 6321669987480508287}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ChangeBolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5450,7 +5492,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 167.3111, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1747829531
 MonoBehaviour:
@@ -5464,8 +5506,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AspectMode: 2
-  m_AspectRatio: 1
+  m_AspectMode: 1
+  m_AspectRatio: 1.7402062
 --- !u!114 &1747829532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5486,7 +5528,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f0916a205cd8e4f42b43fb113cfda656, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d915035b581f1cf4c911b1af8be997b0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6036,9 +6078,9 @@ RectTransform:
   - {fileID: 298356126}
   m_Father: {fileID: 1581215416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 496.79996, y: -938.8734}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 496.80002, y: 0}
   m_SizeDelta: {x: 913.5999, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1992325860
@@ -6085,8 +6127,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
+      - m_Target: {fileID: 109484044}
+        m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
         m_MethodName: Refresh
         m_Mode: 1
         m_Arguments:
@@ -6097,7 +6139,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1847259822}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: SetTrigger
         m_Mode: 5
