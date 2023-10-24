@@ -24,7 +24,7 @@ public class UITutorialPanel : MonoBehaviour
 		TouchSimulation.Enable();
 		
 		mainContainer.SetActive(true);
-		text.text = "Welcome to Bonanza Rumble!";
+		text.text = "Welcome to Circles!";
 		Touch.onFingerDown += Edit1;
 	}
 	

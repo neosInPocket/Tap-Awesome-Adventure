@@ -27,11 +27,19 @@ public class PlayerSecondBall : BallAbstract
 			isGrounded = true;
 			return;
 		}
-		
-		if (collision.collider.TryGetComponent<MovingObstacle>(out MovingObstacle obstacle))
+	}
+	
+	private void OnTriggerEnter2D(Collider2D collider)
+	{
+		if (collider.TryGetComponent<MovingObstacle>(out MovingObstacle obstacle))
 		{
 			player.RaiseDamageTakenEvent();
-			return;
+		}
+		
+		if (collider.TryGetComponent<CoinBall>(out CoinBall coinBall))
+		{
+			player.RaiseCoinCollectedEvent();
+			coinBall.PlayKillEffect();
 		}
 	}
 }

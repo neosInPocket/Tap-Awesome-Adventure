@@ -9,6 +9,8 @@ using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class PlayerMainBall : BallAbstract
 {
+	[SerializeField] private SpriteRenderer playerSpriteRenderer;
+	[SerializeField] private SpriteRenderer secondBallSpriteRenderer;
 	[SerializeField] private float jumpAmplitude; 
 	public Action<float> BarrierCollision;
 	private float currentMaxSpeed;
@@ -16,12 +18,13 @@ public class PlayerMainBall : BallAbstract
 	public float GMultiplier => gMultiplier;
 	
 	public Action PlayerDamageTaken;
+	public Action CoinCollectedEvent;
 
 	private void Start()
 	{
 		EnhancedTouchSupport.Enable();
 		TouchSimulation.Enable();
-		EnableControls();
+		rb.angularVelocity = 2;
 	}
 	
 	public void EnableControls()
@@ -56,24 +59,58 @@ public class PlayerMainBall : BallAbstract
 		{
 			isGrounded = true;
 			BarrierCollision?.Invoke(currentMaxSpeed);
-			return;
 		}
-		
-		if (collision.collider.TryGetComponent<MovingObstacle>(out MovingObstacle obstacle))
+	}
+	
+	private void OnTriggerEnter2D(Collider2D collider)
+	{
+		if (collider.TryGetComponent<MovingObstacle>(out MovingObstacle obstacle))
 		{
 			RaiseDamageTakenEvent();
-			return;
+		}
+		
+		if (collider.TryGetComponent<CoinBall>(out CoinBall coinBall))
+		{
+			RaiseCoinCollectedEvent();
+			coinBall.PlayKillEffect();
 		}
 	}
 	
 	public void GetDamage()
 	{
-		
+		StartCoroutine(TakeDamageEffect());
+	}
+	
+	private IEnumerator TakeDamageEffect()
+	{
+		bool exit = false;
+		int counter = 0;
+		while (!exit)
+		{
+			if (counter == 7)
+			{
+				exit = true;
+				yield break;
+			}
+			
+			playerSpriteRenderer.color = new Color(1, 1, 1, 0.3f);
+			secondBallSpriteRenderer.color = new Color(1, 1, 1, 0.3f);
+			yield return new WaitForSeconds(0.2f);
+			playerSpriteRenderer.color = new Color(1, 1, 1, 1f);
+			secondBallSpriteRenderer.color = new Color(1, 1, 1, 1f);
+			yield return new WaitForSeconds(0.2f);
+			counter++;
+		}
 	}
 	
 	public void RaiseDamageTakenEvent()
 	{
 		PlayerDamageTaken?.Invoke();
+	}
+	
+	public void RaiseCoinCollectedEvent()
+	{
+		CoinCollectedEvent?.Invoke();
 	}
 	
 	private void OnDestroy()

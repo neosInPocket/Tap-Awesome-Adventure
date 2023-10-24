@@ -10,11 +10,6 @@ public class ObstacleSpawner : MonoBehaviour
 	private bool isEnabled;
 	private bool isSpawned;
 	
-	private void Start()
-	{
-		isEnabled = true;
-	}
-	
 	private void Update()
 	{
 		if (!isEnabled) return;

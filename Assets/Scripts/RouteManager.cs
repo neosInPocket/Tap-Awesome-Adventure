@@ -28,6 +28,11 @@ public class RouteManager : MonoBehaviour
 	
 	public void Enable()
 	{
+		player.PlayerDamageTaken += OnPlayerGotDamageHandler;
+		player.CoinCollectedEvent += OnPlayerAddedCoin;
+		
+		PlayerSaveLoad.CurrentLifesUpgrade = 2;
+		CheckValidLevelValue();
 		currentLifesAmount = PlayerSaveLoad.CurrentLifesUpgrade;
 		currentPoints = 0;
 		levelMaxPoints = CalculateLevelMaxPoints();
@@ -63,7 +68,8 @@ public class RouteManager : MonoBehaviour
 	private void OnCountDownEnd()
 	{
 		uiCountDownPanel.OnCountEndAction -= OnCountDownEnd;
-		obstacleSpawner.enabled = true;
+		obstacleSpawner.On();
+		player.EnableControls();
 	}
 	
 	private void OnPlayerGotDamageHandler()
@@ -75,7 +81,7 @@ public class RouteManager : MonoBehaviour
 	
 	private void OnPlayerAddedCoin()
 	{
-		currentPoints += 2;
+		currentPoints += 3;
 		GUIRefresh();
 		CheckIsWinResult();
 	}
@@ -93,6 +99,9 @@ public class RouteManager : MonoBehaviour
 			
 			player.DisableControls();
 			obstacleSpawner.Off();
+			
+			player.PlayerDamageTaken -= OnPlayerGotDamageHandler;
+			player.CoinCollectedEvent -= OnPlayerAddedCoin;
 		}
 	}
 	
@@ -144,6 +153,17 @@ public class RouteManager : MonoBehaviour
 			uiGameWinLose.Show(false, 0);
 			player.DisableControls();
 			obstacleSpawner.Off();
+			player.PlayerDamageTaken -= OnPlayerGotDamageHandler;
+			player.CoinCollectedEvent -= OnPlayerAddedCoin;
+		}
+	}
+	
+	private void CheckValidLevelValue()
+	{
+		if (PlayerSaveLoad.CurrentLevel == 0)
+		{
+			PlayerSaveLoad.CurrentLevel = 1;
+			PlayerSaveLoad.Save();
 		}
 	}
 }

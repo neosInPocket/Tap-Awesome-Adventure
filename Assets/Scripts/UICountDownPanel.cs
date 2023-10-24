@@ -10,12 +10,12 @@ public class UICountDownPanel : MonoBehaviour
 	
 	public void Play()
 	{
-		StartCoroutine(PlayAnimation());
+		StartCoroutine(PlayCountDown());
 	}
 	
-	private IEnumerator PlayAnimation()
+	private IEnumerator PlayCountDown()
 	{
-		animator.SetTrigger("play");
+		animator.SetTrigger("show");
 		yield return new WaitForSeconds(3f);
 		OnCountEndAction?.Invoke();
 	}

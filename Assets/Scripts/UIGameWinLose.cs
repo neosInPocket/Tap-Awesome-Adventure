@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class UIGameWinLose : MonoBehaviour
 {
-    [SerializeField] private GameObject panelContainer;
+	[SerializeField] private GameObject panelContainer;
 	[SerializeField] private TMP_Text resultText;
 	[SerializeField] private TMP_Text coinsText;
 	[SerializeField] private GameObject coinContainer;
+	[SerializeField] private TMP_Text buttonText;
 	
 	
 	public void Show(bool win, int coins)
@@ -19,11 +20,13 @@ public class UIGameWinLose : MonoBehaviour
 		{
 			resultText.text = "Lose";
 			coinContainer.gameObject.SetActive(false);
+			buttonText.text = "try again";
 		}
 		else
 		{
 			resultText.text = "Win";
 			coinsText.text = "+" + coins;
+			buttonText.text = "next level";
 		}
 	}
 	
