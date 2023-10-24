@@ -10,7 +10,7 @@ public class PlayerSecondBall : BallAbstract
 	private void Start()
 	{
 		player.BarrierCollision += OnPlayerBarrierCollided;
-		gMultiplier = player.GMultiplier;
+		gMultiplier = gMultipliers[PlayerSaveLoad.SpeedUpgrade];
 	}
 	
 	private void OnPlayerBarrierCollided(float speedValue)

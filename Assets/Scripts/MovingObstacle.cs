@@ -47,7 +47,7 @@ public class MovingObstacle : MonoBehaviour
 	{
 		var screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
 		var rnd = Random.Range(0, 1f);
-		if (rnd > coinSpawnChance)
+		if (rnd < coinSpawnChance)
 		{
 			if (obstaclePosition.x > 0)
 			{

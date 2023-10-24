@@ -30,8 +30,8 @@ public class RouteManager : MonoBehaviour
 	{
 		player.PlayerDamageTaken += OnPlayerGotDamageHandler;
 		player.CoinCollectedEvent += OnPlayerAddedCoin;
+		ClearObstaclesContainer();
 		
-		PlayerSaveLoad.CurrentLifesUpgrade = 2;
 		CheckValidLevelValue();
 		currentLifesAmount = PlayerSaveLoad.CurrentLifesUpgrade;
 		currentPoints = 0;

@@ -11,7 +11,7 @@ public class PlayerMainBall : BallAbstract
 {
 	[SerializeField] private SpriteRenderer playerSpriteRenderer;
 	[SerializeField] private SpriteRenderer secondBallSpriteRenderer;
-	[SerializeField] private float jumpAmplitude; 
+	private float jumpAmplitude; 
 	public Action<float> BarrierCollision;
 	private float currentMaxSpeed;
 	private bool isGrounded;
@@ -19,12 +19,15 @@ public class PlayerMainBall : BallAbstract
 	
 	public Action PlayerDamageTaken;
 	public Action CoinCollectedEvent;
+	private float[] jumpAmplitudes = new float[4] { 5, 3.8f, 3f, 2.5f };
 
 	private void Start()
 	{
 		EnhancedTouchSupport.Enable();
 		TouchSimulation.Enable();
-		rb.angularVelocity = 2;
+		rb.angularVelocity = 90;
+		gMultiplier = gMultipliers[PlayerSaveLoad.SpeedUpgrade];
+		jumpAmplitude = jumpAmplitudes[PlayerSaveLoad.SpeedUpgrade];
 	}
 	
 	public void EnableControls()

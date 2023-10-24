@@ -7,7 +7,7 @@ public class MainMenuManager : MonoBehaviour
 {
 	private void Start()
 	{
-		ClearProgress();
+		//ClearProgress();
 	}
 	
 	public void LoadGameScene()

@@ -6,12 +6,12 @@ public abstract class BallAbstract : MonoBehaviour
 {
 	[SerializeField] private Transform barrier;
 	[SerializeField] protected Rigidbody2D rb;
-	[SerializeField] protected float gMultiplier;
+	protected float gMultiplier;
+	protected float[] gMultipliers = new float[4] { 11, 7, 4.2f, 3 };
 	
 	private void Update()
 	{
 		rb.AddForce(SetGravityForce());
-		
 		UpdateLogic();
 	}
 	
@@ -20,7 +20,7 @@ public abstract class BallAbstract : MonoBehaviour
 		var groundDistance = Mathf.Abs(transform.position.x - barrier.position.x);
 		var forceDirection = (- transform.position + barrier.transform.position).normalized;
 		var normalizedForceDirection = new Vector2(forceDirection.x, 0);
-		return gMultiplier * rb.mass / Mathf.Pow(groundDistance, 1) * normalizedForceDirection * Time.deltaTime;
+		return gMultiplier * rb.mass / Mathf.Pow(groundDistance, 1) * normalizedForceDirection * Time.deltaTime * 100;
 	}
 	
 	protected virtual void UpdateLogic()
