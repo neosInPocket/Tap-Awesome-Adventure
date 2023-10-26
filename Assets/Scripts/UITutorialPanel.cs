@@ -24,7 +24,7 @@ public class UITutorialPanel : MonoBehaviour
 		TouchSimulation.Enable();
 		
 		mainContainer.SetActive(true);
-		text.text = "Welcome to Circles!";
+		text.text = "Welcome to Tap Awesome Adventure!";
 		Touch.onFingerDown += Edit1;
 	}
 	
@@ -32,21 +32,21 @@ public class UITutorialPanel : MonoBehaviour
 	{
 		Touch.onFingerDown -= Edit1;
 		Touch.onFingerDown += Edit2;
-		text.text = "Control your candy by placing electromagnetic sources nearby!";
+		text.text = "Control your ball by touching the screen. Your second ball is moving due to collision with the first ball.";
 	}
 	
 	private void Edit2(Finger finger)
 	{
 		Touch.onFingerDown -= Edit2;
 		Touch.onFingerDown += Edit3;
-		text.text = "Be aware of spikes that sometomes appear on platforms";
+		text.text = "Be aware of moving platforms that!";
 	}
 	
 	private void Edit3(Finger finger)
 	{
 		Touch.onFingerDown -= Edit3;
 		Touch.onFingerDown += Edit4;
-		text.text = "Collect coins and buy different upgrades, such as maximum health amount";
+		text.text = "Collect coins and buy different upgrades, such as ball speed or maximum health amount";
 	}
 	
 	private void Edit4(Finger finger)

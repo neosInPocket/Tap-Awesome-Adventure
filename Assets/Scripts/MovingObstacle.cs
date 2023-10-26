@@ -1,8 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Callbacks;
-using UnityEditor.ProjectWindowCallback;
 using UnityEngine;
 
 public class MovingObstacle : MonoBehaviour
